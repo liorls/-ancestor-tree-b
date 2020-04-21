@@ -269,6 +269,9 @@ using namespace family;
         if(nameToFind == "mother" && this->mother!=NULL) return this->mother->name;
         if(nameToFind == "father" && this->father!=NULL) return this->father->name;
 
+        if(nameToFind.find("mother") != std::string::npos && nameToFind.find("father") != std::string::npos )
+            throw runtime_error {"There is no relation "+ nameToFind};
+
         string name =findRecursivy(this, nameToFind);
         if(name == "")
             throw runtime_error {"There is no relation "+ nameToFind};
