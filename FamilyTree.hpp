@@ -25,12 +25,13 @@ namespace family{
         Tree& addFather(string son, string f);
         Tree& addMother(string son, string m);
         string relation(string name);
-        string find(string find);
+        string find(string nameToFind);
         void display();
         void remove(string r);
 
         Tree* search (Tree* current , string name);
         void print2DUtil(Tree *root, int space);  
+        string findRecursivy (Tree* current, string nameToFind);     
 
 
     };
